@@ -1,5 +1,15 @@
-function uncompletedNotes(notes) {
-  notes.forEach((el) => console.log(el));
+function uncompletedNotes() {
+  const uncompletedTodos = [];
+
+notes.forEach((note) => {
+    note.todos.forEach((todo) => {
+      if (!todo.done) {
+        uncompletedTodos.push(todo);
+      }
+    });
+  });
+
+return uncompletedTodos
 }
 
 const notes = [
@@ -51,5 +61,4 @@ const notes = [
     ],
   },
 ];
-
-uncompletedNotes(notes);
+console.log(uncompletedNotes(notes));

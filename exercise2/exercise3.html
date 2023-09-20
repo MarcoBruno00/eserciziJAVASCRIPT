@@ -20,15 +20,9 @@
 </html>
 
 <script>
-const firstNameInput = document.getElementById('firstName');
-const lastNameInput = document.getElementById('lastName');
-const ageInput = document.getElementById('age');
-
-const firstName = firstNameInput.value;
-const lastName = lastNameInput.value;
-const age = ageInput.value;
-
-console.log( firstName);
-console.log( lastName);
-console.log( age);
+  const labels = document.querySelectorAll("label")
+  const inputs = document.querySelectorAll(".form-input")
+  labels.forEach((label, index) => {
+        console.log(`${label.textContent} ${inputs[index].value}`);
+      });
 </script>
